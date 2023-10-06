@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: auto;
+  height: 700px;
+}
+
+.content-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-text {
+  padding-block: 10px;
+}
+
+.no-details {
+  padding-block: 10px;
+}
+
+#input {
+  width: 300px;
+  padding: 10px;
+  border-bottom: 1px solid;
+  outline: none;
+}
+
+.btn {
+  padding: 10px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}

@@ -3,7 +3,7 @@ import "dotenv/config";
 import { dirname } from "path";
 import { fileURLToPath } from "url";
 import connect from "./DBconnection.js";
-
+import bodyParser from "body-parser";
 const app = express();
 // console.log(process.env);
 const PORT = process.env.port || 8080;
@@ -16,7 +16,7 @@ try {
   console.log(err);
 }
 
-app.use(express.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // logger middleware
 
@@ -29,6 +29,10 @@ app.use((req, res, next) => {
 app.get("/", (req, res) => {
   console.log(__dirname + "/public/index.html");
   res.sendFile(__dirname + "/public/index.html");
+});
+
+app.post("/add-user", (req, res) => {
+  console.log(req.body());
 });
 
 app.listen(PORT, () => {

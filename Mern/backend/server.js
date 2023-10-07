@@ -28,6 +28,11 @@ app.get("/", (req, res) => {
   res.send("Hello world");
 });
 
+app.get("/get", (req, res) => {
+  TodoModel.find()
+    .then((result) => res.json(result))
+    .catch((err) => console.log(err));
+});
 app.post("/add", (req, res) => {
   const task = req.body.task;
   console.log(task);

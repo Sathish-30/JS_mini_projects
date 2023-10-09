@@ -1,9 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: auto;
   height: 700px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
 }
 
 .content-box {
@@ -36,9 +40,39 @@
 }
 
 .result {
-  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   width: 350px;
   background-color: black;
   color: white;
-  padding: 10px;
+  padding: 2px 5px 2px 5px;
+  margin-top: 10px;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox .icon {
+  margin: 0px 10px;
+  font-size: 15px;
+}
+
+.result div span {
+  /* margin works in clockwise direction */
+  margin: 0px 5px 0px 4px;
+}
+
+.delIcon .icon {
+  margin: 0px 10px;
+}
+
+.result div .icon {
+  cursor: pointer;
+}
+
+.line-through {
+  text-decoration: line-through;
 }

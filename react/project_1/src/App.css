@@ -1,7 +1,45 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 15px;
+}
+
+.header p {
+  cursor: pointer;
+  font-size: 1.4rem;
+  margin-left: 100px;
+}
+
+.header-list {
+  display: flex;
+  margin-right: 50px;
+}
+
+.list {
+  list-style: none;
+  margin: 0 50px;
+}
+
+.list a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #000;
+}
+
 .container {
-  height: auto;
+  height: 600px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer p {
+  font-size: medium;
 }

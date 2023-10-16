@@ -1,0 +1,78 @@
+/* The Below following code are for Header */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header p {
+  cursor: pointer;
+  margin-left: 40px;
+  font-size: 1.5rem;
+}
+
+.header-list {
+  display: flex;
+}
+
+.list {
+  list-style: none;
+  cursor: pointer;
+  padding: 0 30px;
+}
+
+.list a {
+  color: black;
+  text-decoration: none;
+}
+
+.list a:hover {
+  color: grey;
+}
+
+/* The Below Following code are for Main content */
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+}
+
+.form-details {
+  display: grid;
+  grid-template-areas:
+    "H"
+    "M"
+    "F";
+  gap: 10px;
+}
+
+.form-details #item-id {
+  grid-area: H;
+}
+
+.form-details #item-item {
+  grid-area: M;
+}
+
+.form-details #addBtn {
+  grid-area: F;
+}
+
+.input-field {
+  height: 25px;
+  width: 350px;
+}
+
+.btn {
+  width: 100px;
+  margin: auto;
+}
+
+/* The Below Following code are for Main content */
+
+.footer {
+  display: flex;
+  justify-content: center;
+}

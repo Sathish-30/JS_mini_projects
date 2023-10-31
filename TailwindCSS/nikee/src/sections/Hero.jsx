@@ -1,14 +1,15 @@
 import React from "react";
 import Button from "../components/Button";
+import ShoeCard from "../components/ShoeCard";
 import { arrowRight } from "../assets/icons";
-import { statistics } from "../constants";
+import { shoes, statistics } from "../constants";
 import { bigShoe1 } from "../assets/images";
 
 const Hero = () => {
   return (
     <section
       id="home"
-      className="w-full flex xl:flex-row flex-col justify-center min-h-screen gap-10 max-container"
+      className="w-full flex justify-center xl:flex-row flex-col xl:pl-[60px] min-h-screen gap-10 max-container"
     >
       <div className="relative xl:w-2/5 flex flex-col justify-center items-start w-full max-xl:padding-x pt-28">
         <p className="text-xl font-montserrat text-coral-red">
@@ -38,7 +39,7 @@ const Hero = () => {
         </div>
       </div>
       {/* flex-1  expands nicely */}
-      <div className="relative flex-1 flex justify-center items-center xl:min-h-screen max-xl:py-40 bg-primary bg-cover bg-center">
+      <div className="relative flex-1 flex justify-center items-center xl:min-h-screen max-xl:py-40 bg-primary bg-hero bg-cover bg-center">
         <img
           src={bigShoe1}
           alt="shoe collection"
@@ -46,6 +47,16 @@ const Hero = () => {
           heigth={500}
           className="object-contain relative z-10"
         />
+        <div>
+          {shoes.map((shoe , index) =>(
+          <div key={shoe}>
+            <ShoeCard 
+              imgURL={shoe} 
+              changeBigShoeImage = { ()=> {}} 
+              bigShoeImg = ""/>
+          </div>
+          ))}
+        </div>
       </div>
     </section>
   );
